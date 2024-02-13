@@ -7,19 +7,19 @@
 </head>
 <body>
 <h1>Bestilling av kinobilletter</h1>
-<table>
-  <tr>
-    <td>Velg film:</td><td><label for="velgFilm"></label><select id="velgFilm">
+
+  Velg film:<label for="velgFilm"></label><select id="velgFilm">
       <option>Velg film her</option>
       <option>Wonka</option>
       <option>Dune part 2</option>
       <option>Anyone but you</option>
-  </select></td>
-  </tr>
-    <tr><td>Antall</td><td><label for="antall"></label>
-      <input type="number" id="antall" value="" min="1" max="10" required></td>
-      <td><span id="feilAntall"></span></td></tr>
-  <tr>
+  </select><br><br>
+    Antall<label for="antall"></label>
+      <input type="number" id="antall" value="" min="1" max="9" required>
+      <span id="feilAntall"></span>
+<br><br>
+  <table>
+    <tr>
     <td>Fornavn</td><td><label for="fornavn"></label>
     <input type="text" id="fornavn" value="" required></td><td><span id="feilFornavn"></span></td>
   </tr>

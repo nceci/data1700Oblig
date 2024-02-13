@@ -1,5 +1,4 @@
 let billetter = [];
-if (input)
 function kjopBillett(){
     let film = document.getElementById("velgFilm").value;
     let innAntall = document.getElementById("antall").value;
