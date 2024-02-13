@@ -55,11 +55,7 @@ function checkInput(){
         document.getElementById("feilEpost").innerText="";
     }
     console.log(errorCount)
-    if (errorCount > 0){
-        return true
-    }else{
-    return false
-    }
+    return errorCount > 0;
 }
 function kjopBillett(){
     console.log("starter kjøp")
@@ -74,7 +70,7 @@ function kjopBillett(){
     //let telefonnr = Number(tlf);
     const bestill = {
         film : film,
-        antall : innAntall,
+        antall : antall,
         fornavn : fornavn,
         etternavn : etternavn,
         telefonnr : telefonnr,
