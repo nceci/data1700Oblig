@@ -8,12 +8,12 @@
 <body>
 <h1>Bestilling av kinobilletter</h1>
 <form>
-  Velg film:<label for="velgFilm"></label><select id="velgFilm">
-      <option>Velg film her</option>
+  Velg film:<label for="velgFilm"></label><select id="velgFilm" required>
+      <option label="Velg film her"></option>
       <option>Wonka</option>
       <option>Dune part 2</option>
       <option>Anyone but you</option>
-  </select><br><br>
+   </select><br><br>
     Antall<label for="antall"></label>
       <input type="number" id="antall" value="" min="1" max="9" required>
       <span id="feilAntall" class="feilMeldingTxt"></span>

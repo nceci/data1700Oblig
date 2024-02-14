@@ -1,6 +1,7 @@
 let billetter = [];
 
 function checkInput(){
+    let film = document.getElementById("velgFilm").value;
     let innAntall = document.getElementById("antall").value;
     let fornavn = document.getElementById("fornavn").value;
     let etternavn = document.getElementById("etternavn").value;
@@ -10,6 +11,9 @@ function checkInput(){
     let errorCount = 0
 
     //få rød feilmelding ved mangel på input
+    if(film==="" || film==="Velg film her"){
+        errorCount++
+    }
     if (antall === 0 || antall == null){
         let antallfeil = document.getElementById("feilAntall");
         antallfeil.innerText = "Må skrive noe inn i antall";
