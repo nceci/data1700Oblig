@@ -7,41 +7,43 @@
 </head>
 <body>
 <h1>Bestilling av kinobilletter</h1>
-<table>
-  <tr>
-    <td>Velg film:</td><td><label for="velgFilm"></label><select id="velgFilm">
-      <option>Velg film her</option>
+<form>
+  Velg film:<label for="velgFilm"></label><select id="velgFilm" required>
+      <option label="Velg film her"></option>
       <option>Wonka</option>
       <option>Dune part 2</option>
       <option>Anyone but you</option>
-  </select></td>
-  </tr>
-    <tr><td>Antall</td><td><label for="antall"></label>
-      <input type="number" id="antall" value="" min="1" max="10" required></td>
-      <td><span id="feilAntall"></span></td></tr>
-  <tr>
+   </select><br><br>
+    Antall<label for="antall"></label>
+      <input type="number" id="antall" value="" min="1" max="9" required>
+      <span id="feilAntall" class="feilMeldingTxt"></span>
+<br><br>
+  <table>
+    <tr>
     <td>Fornavn</td><td><label for="fornavn"></label>
-    <input type="text" id="fornavn" value="" required></td><td><span id="feilFornavn"></span></td>
+      <input type="text" id="fornavn" value="" required></td><td><span id="feilFornavn" class="feilMeldingTxt"></span></td>
   </tr>
   <tr><td>Etternavn</td><td><label for="etternavn"></label>
     <input type="text" id="etternavn" value="" required></td><td>
-    <span id="feilEtternavn"></span></td>
+    <span id="feilEtternavn" class="feilMeldingTxt"></span></td>
   </tr>
   <tr>
     <td>Telefonnr</td><td><label for="tlf"></label>
-    <input type="tel" id="tlf" pattern="[0-9]{8}" maxlength="8" title="Du må skrive inn 8 tall" required></td>
-    <td><span id="feilTlf"></span></td>
+    <input type="tel" id="tlf" pattern="[0-9]{8,}$" maxlength="8" required></td>
+    <td><span id="feilTlf" class="feilMeldingTxt"></span></td>
   </tr>
   <tr>
     <td>Epost</td><td><label for="epost"></label>
     <input type="email" id="epost" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" value="" required></td>
-    <td><span id="feilEpost"></span></td>
+    <td><span id="feilEpost" class="feilMeldingTxt"></span></td>
   </tr>
 </table>
+
 <button onclick="kjopBillett()">Kjøp billett</button>
-<h2>Alle billetter</h2>
-<div id="skrivUt"></div>
-<button onclick="slettBillett()">Slett alle billettene</button>
-<div id="billetter"></div>
-</body>
-</html>
+  </form>
+  <h2>Alle billetter</h2>
+  <div id="skrivUt"></div>
+  <button onclick="slettBillett()">Slett alle billettene</button>
+  <div id="billetter"></div>
+  </body>
+  </html>
