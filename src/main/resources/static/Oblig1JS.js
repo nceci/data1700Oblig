@@ -7,8 +7,8 @@ function checkInput() {
     let telefonnr = document.getElementById("tlf").value;
     let epost = document.getElementById("epost").value;
     let antall = Number(innAntall);
-    let validtlf = document.getElementById("tlf").checkValidity();
-    let validepost = document.getElementById("epost").checkValidity();
+    let validTlf = document.getElementById("tlf").checkValidity();
+    let validEpost = document.getElementById("epost").checkValidity();
     let errorCount = 0
 
 
@@ -56,7 +56,7 @@ function checkInput() {
     } else {
         document.getElementById("feilEpost").innerText = "";
     }
-    if (!validtlf||!validepost){
+    if (!validTlf||!validEpost){
         errorCount++
     }
     console.log(errorCount)
